@@ -1,0 +1,96 @@
+
+.triple {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.triple .images {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.triple .images .image {
+  width: 33%;
+}
+
+.triple .images .image img {
+  width: 100%;
+}
+
+.selection {
+  width: 90%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.selection .selection_box {
+  padding-top: 15px;
+  width: 40%;
+}
+
+.single_image {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.single_image img{
+  width: 100%;
+}
+
+
+.section {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+.dual_image {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.dual_image .left_image {
+  width: 50%;
+  text-align: center;
+}
+
+.dual_image .left_image img{
+  width: 100%;
+}
+
+.dual_image .right_image {
+  width: 35%;
+  text-align: center;
+}
+
+.dual_image .right_image img{
+  width: 100%;
+}
+
+.slider_box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.slider_box .slider{
+  margin-top: 15px;
+  font-size: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

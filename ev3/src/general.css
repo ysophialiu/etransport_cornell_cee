@@ -1,0 +1,225 @@
+* {
+  font-family: Lato,Arial,Helvetica,sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #444;
+}
+
+.big_title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    /*color: #e53935;
+    border-bottom: 4px solid #ddd;*/
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    /*background-color: #f5f5f5;*/
+	background-color: #b31b1b;
+	color: white;
+}
+
+.subtitle-small {
+  color: #e53935;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle-small-two {
+  color: #e53935;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.subtitle-small-three {
+  color: #e53935;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.subtitle-small-five {
+  color: #e53935;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle-small-four {
+  color: #de2672;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 7px;
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 580px) {
+	.content {
+		max-width: 522px;
+	}
+}
+
+@media (min-width: 768px) {
+	.content {
+		max-width: 691px;
+	}
+}
+
+@media (min-width: 900px) {
+	.content {
+		max-width: 810px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.content {
+		max-width: 1080px;
+	}
+}
+
+.content .subtitle {
+  color: #e53935;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.content .subtitle-small-two {
+  color: #e53935;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.content .paragraph {
+  padding-bottom: 30px;
+}
+
+.content .item {
+  padding-bottom: 15px;
+}
+
+.chart-title {
+  padding-left: 15px;
+}
+
+a:hover {
+    color: #ef6c6c;
+}
+
+.btn-primary {
+    background-color: #e53935;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff6f5e;
+}
+
+.btnContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 25%;
+}
+
+.pageBtn {
+    color: white;
+    font-size: 14px;
+    padding: 3px 10px;
+    background-color: #A1A1A1;
+    margin: 0 10px;
+    transition: all 0.3s;
+    border: 2px;
+    border-radius: 4px;
+}
+
+.pageBtn:hover {
+    border: 2px;
+    border-radius: 4px;
+    background-color: #797979;
+}
+svg :focus {
+  outline: none;
+}
+
+.slider-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hour-slider {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.time-labels span {
+    font-size: 12px;
+}
+
+.table-col {
+  width: 25%;
+}
+
+.half-width-input {
+  width: 70%;
+}
+
+.custom-tooltip {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+
+ul {
+  list-style-type: circle;
+}
+
+.key {
+  color: #e53935;
+}
+
+.value {
+  color: green;
+  fontStyle: italic;
+  margin-right: 20px;
+}
+
+/* Standard Bootstrap grid layout applies for screens wider than 600px */
+
+/* Custom styles for screens smaller than 600px */
+@media (max-width: 649px) {
+    .container-class .col-sm-4 {
+        width: 100%;
+        max-width: 100%;
+    }
+}

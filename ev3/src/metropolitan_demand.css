@@ -1,0 +1,44 @@
+.options {
+  font-size: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options label {
+  display: inline-block;
+}
+
+.options button {
+  background-color: #F8981D;
+  border: 2px solid #831111;
+  color: white;
+  padding: 15px 60px;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #b31b1b;
+  border: 2px solid #302e2e;
+  color: white;
+  padding: 15px 60px;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 18px;
+}
