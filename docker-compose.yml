@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    image: node:20-slim
+    volumes:
+      - ./ev3:/app 
+    ports:
+      - 3000:3000
+    working_dir: /app
+    command: bash -c "yarn install && yarn start"
+  api:
+    build: ./api
+    ports:
+      - 5000:5000
+
