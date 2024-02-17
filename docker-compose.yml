@@ -5,12 +5,25 @@ services:
     image: node:20-slim
     volumes:
       - ./ev3:/app 
+      - /etc/letsencrypt/archive/etransport.cee.cornell.edu:/app/certs:ro
+    environment:
+      - HTTPS=true
+      - SSL_CRT_FILE=certs/cert3.pem
+      - SSL_KEY_FILE=certs/privkey3.pem
     ports:
       - 3000:3000
     working_dir: /app
     command: bash -c "yarn install && yarn start"
+    networks:
+      etransport:
+         ipv4_address: 172.20.0.2
   api:
     build: ./api
     ports:
       - 5000:5000
-
+    networks:
+      etransport:
+         ipv4_address: 172.20.0.3
+networks:
+  etransport:
+    external: true
