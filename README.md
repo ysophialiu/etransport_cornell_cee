@@ -83,10 +83,10 @@ in a separate terminal window or press __control + C__.
 Feel free to use the code in this repository however you wish. Details are provided in
 [LICENSE.md](LICENSE.md).
 
-Extra notes about the server configuration:
+## Extra notes about the server configuration:
 
 The iptables firewall rules set up to accept and redirect requests should be saved on the server.
 In the case they have been reset, try to use the iptables-restore command to restore the disk version.
 The ev3 webserver runs on the etransport Docker network at 172.20.0.2, and the api runs on the same network
-at 172.20.0.3. There should be another container in an adjacent folder whose job it is to redirect HTTP
-requests to the HTTPS link that the webserver serves. 
+at 172.20.0.3. There should be another container in an adjacent folder whose job it is to reverse proxy requests
+to the correct container. 

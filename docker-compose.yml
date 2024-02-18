@@ -5,11 +5,6 @@ services:
     image: node:20-slim
     volumes:
       - ./ev3:/app 
-      - /etc/letsencrypt/archive/etransport.cee.cornell.edu:/app/certs:ro
-    environment:
-      - HTTPS=false
-      - SSL_CRT_FILE=certs/cert3.pem
-      - SSL_KEY_FILE=certs/privkey3.pem
     ports:
       - 3000:3000
     working_dir: /app
