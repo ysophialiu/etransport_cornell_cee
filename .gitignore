@@ -1,4 +1,4 @@
 ev3/node_modules/
-//api/vtrip/perpub.csv
-//api/vtrip/vtrip2.csv
 .DS_Store
+**/*.log
+ev3/build/
