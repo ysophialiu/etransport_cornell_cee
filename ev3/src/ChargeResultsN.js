@@ -6,15 +6,38 @@ import Header from "./Header";
 import RedirectBack from "./RedirectBack";
 import * as d3 from 'd3';
 import StateChart from "./StateChart";
-import data from "bootstrap/js/src/dom/data";
-import { jsPDF } from 'jspdf';
+// import data from "bootstrap/js/src/dom/data";
+// import { jsPDF } from 'jspdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCircleQuestion, faInfoCircle, faQuestionCircle} from '@fortawesome/free-solid-svg-icons';
+// import {faCircleQuestion, faInfoCircle, faQuestionCircle} from '@fortawesome/free-solid-svg-icons';
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 import ReactTooltip from 'react-tooltip';
 import JSZip from 'jszip';
+import { useNavigate } from "react-router-dom";
 
 
-const ChargeResultsN = () => {
+const ChargeResultsCheck = () => {
+    let { state } = useLocation();
+    let navigate = useNavigate();
+    function navigateLink(link) { return () => navigate(link); }
+    return !!state ? <ChargeResultsN state={state}/> : (<div>
+        <Header/>
+        <div className="big_title">BEV Charging Demand</div>
+        <div className="content">
+            <div>
+                Your data request has expired (likely caused by attempting to directly access results with a link). Please navigate back to the simulation page and
+                resend your request.
+            </div>
+            <div className="section"></div>
+            <div className="btnContent">
+                <button className="pageBtn" onClick={navigateLink("/live-modelN")}>Back to Simulation Setup</button>
+                <button className="pageBtn" onClick={navigateLink("/")}>Back to Home Page</button>
+            </div>
+        </div>
+    </div>)
+}
+
+const ChargeResultsN = ({state}) => {
 
     const [selectedChart, setSelectedChart] = useState('chart4');
 
@@ -38,9 +61,10 @@ const ChargeResultsN = () => {
 
     const d3Container6 = useRef(null);
 
-    let { state } = useLocation();
+    // let { state } = useLocation();
 
-    const {dayType} = state
+    // const {dayType} = state
+    const { area } = useParams()
 
     const [TDstatus, setTDstatus] = useState('loading');
 
@@ -63,7 +87,7 @@ const ChargeResultsN = () => {
               }
           )
           .catch(error => console.error('Error fetching visualization data:', error));
-    }, []);
+    }, [state, area]);
 
     useEffect(() => {
         if(contentRef.current) {
@@ -119,7 +143,7 @@ const ChargeResultsN = () => {
             }
           
             if (item.charges && Object.keys(item.charges).length > 0) {
-              newItem["spatio distribution"] = item.charges;
+              newItem["spatial distribution"] = item.charges;
             }
           
             return newItem;
@@ -638,8 +662,6 @@ const ChargeResultsN = () => {
         URL.revokeObjectURL(url);
     });
     }
-
-    const { area } = useParams()
 
     let zoom = 1;
 
@@ -1963,5 +1985,5 @@ const ChargeResultsN = () => {
   );
 }
 
-export default ChargeResultsN;
+export default ChargeResultsCheck;
 

@@ -84,10 +84,10 @@ const StateChart = (props, ref) => {
 
   const charges = props.chargedata.charges;
   let scaled_charges = {};
-  Object.keys(charges).forEach((geoid) => {scaled_charges[geoid] = charges[geoid]*dataScale});
-
-
-  let colorScale = scaleQuantile().domain(Object.values(scaled_charges)).range(schemeBlues[5]);
+  Object.keys(charges).forEach((geoid) => {scaled_charges[geoid] = charges[geoid]; scaled_charges[geoid]["demand"] = scaled_charges[geoid]["demand"] * dataScale});
+  let scaled_demands = {};
+  Object.keys(scaled_charges).forEach((geoid) => scaled_demands[geoid] = scaled_charges[geoid]["demand"]);
+  let colorScale = scaleQuantile().domain(Object.values(scaled_demands)).range(schemeBlues[5]);
 
   let geographyURL = '/shapes/' + props.state_name + '_shape.topojson';
 
@@ -119,12 +119,13 @@ const StateChart = (props, ref) => {
           <Geographies geography={"/topo/tl_2015_" + stateMetadata.fips + "_tract.json"} style={{}}>
             {({ geographies }) =>
               geographies.map((geography) => {
-                const t = scaled_charges[geography.properties.GEOID];
+                const t = scaled_demands[geography.properties.GEOID];
+                const f = t? colorScale(t).toString() : '#ffcbc9';
                 return (
                   <Geography
                       key={geography.rsmKey}
                       geography={geography}
-                      fill={t !== undefined ? colorScale(t) : '#ffcbc9'}
+                      fill={f}
                   />
                 );
               })
@@ -158,12 +159,13 @@ const StateChart = (props, ref) => {
           <Geographies geography={"/topo/tl_2015_" + stateMetadata.fips + "_tract.json"}>
             {({ geographies }) =>
               geographies.map((geography) => {
-                const t = scaled_charges[geography.properties.GEOID];
+                const t = scaled_demands[geography.properties.GEOID];
+                const f = t? colorScale(t).toString() : '#ffcbc9';
                 return (
                   <Geography
                       key={geography.rsmKey}
                       geography={geography}
-                      fill={t !== undefined ? colorScale(t) : '#ffcbc9'}
+                      fill={f}
                   />
                 );
               })
