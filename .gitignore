@@ -2,3 +2,5 @@ ev3/node_modules/
 .DS_Store
 **/*.log
 ev3/build/
+api/__pycache__/
+api/yarn.lock

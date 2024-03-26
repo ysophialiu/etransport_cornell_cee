@@ -37,7 +37,7 @@ export default class PlacementResult extends React.Component {
                   <img src={base + "/base_optimal_dcfc"} alt="Optimal DCFC Charging Station Placement for the Base Scenario" />
                 </div>
               </div>
-              <div> Optimal configurations of chargers found through simulation for the base scenario </div>
+              <div> Optimal configurations of chargers found through simulation for the base scenario. Left: L2 Chargers Placement, Right: DCFC Placement. </div>
             </div>
             <div>
               These results show that under these assumptions, charging stations
@@ -45,25 +45,17 @@ export default class PlacementResult extends React.Component {
               demands - the distribution is spread out somewhat evenly across most
               areas.
             </div>
-            <div>
-              Compared to current charging placement strategies, this placement
-              is estimated to perform significantly better. This configuration
-              of chargers generates twice the NPV in simulation of simply
-              arranging a uniform distribution of charging stations in each
-              area, and about 50% better than distributing charging stations
-              proportionately to the number of parked vehicles in each area.
-            </div>
-            <div style={{ color: "red" }}> Note: The above section should be replaced or accompanied by an infographic </div>
-            <div>
+	    <div>
               Under the optimal configuration found in our research, the
               average charging time was around 6.9 hours, with much shorter
               average charging times at work and in public and much longer
               average charging times at home.
             </div>
-            <div className="single_image">
+            <div className="single_image" style={{width:"100%"}}>
               <img src={base + "/charging_time_distribution"}
                 alt="Distribution of charging times found in the simulation based on location and charger type"
               />
+	      <div> Charging times distribution based on location. Left: Home Chargers. Center: Public Chargers. Right: Work Chargers. </div>
             </div>
           </div>
           <div className="section">

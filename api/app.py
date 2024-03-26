@@ -17,6 +17,13 @@ CORS(app)
 def hello_world():
     return "<p>Hello, World!</p>"
 
+@app.route('/api/charging_placement/<name>', methods=['GET'])
+def charging_placement(name):
+    file_path = "./pictures/Atlanta10/ChargingPlacement/" + name + ".png"
+    response = make_response(send_file(file_path, mimetype='image/png'))
+    response.headers['Content-Transfer-Encoding'] = 'base64'
+    return response
+
 # API for the pictures in the first section.
 @app.route('/api/travel_demand/<name>/<metro_value>/<share_value>', methods=['GET'])
 def travel_demand_time(name, metro_value, share_value):

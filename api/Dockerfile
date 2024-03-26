@@ -1,7 +1,7 @@
 FROM python:3
 
 WORKDIR /api
-COPY . /api
+COPY ./requirements.txt /api
 
 RUN chmod 1777 /tmp
 RuN apt-get update
