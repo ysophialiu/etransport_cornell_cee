@@ -82,3 +82,6 @@ in a separate terminal window or press __control + C__.
 ## License
 Feel free to use the code in this repository however you wish. Details are provided in
 [LICENSE.md](LICENSE.md).
+
+If you run into Docker network issues, such as ones pertaining to the external environment, run this command:
+`docker network create -d bridge etransport`

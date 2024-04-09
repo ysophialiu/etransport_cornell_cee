@@ -82,7 +82,7 @@ const LiveLaunch = () => {
 
           <Form.Group as={Row} className="mb-3 justify-content-md-center">
             <Col md={2}>
-              <Button type="submit" className="pageBtn">Get Travel Demand</Button>
+              <Button type="submit" className="btn-primary">Get Travel Demand</Button>
             </Col>
           </Form.Group>
         </Form>

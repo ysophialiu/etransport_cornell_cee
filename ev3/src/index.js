@@ -12,6 +12,7 @@ import ChargeResults from './ChargeResults';
 import ChargeResultsCheck from './ChargeResultsN';
 import LiveLaunchN from "./LiveLaunchN";
 import './general.css';
+import Demand from './Demand';
 import Placement from './Placement';
 import PlacementResult from './PlacementResults';
 import PythonPackage from './PythonPackage';
@@ -33,10 +34,13 @@ root.render(
 
       <Route exact path="/live-model/charging-demand/:area" element={<ChargeResults />} />
       <Route exact path="/live-modelN/charging-demandN/:area" element={<ChargeResultsCheck />} />
+
+      <Route exact path="/demand" element={<Demand />} />
+
       <Route exact path="/placement" element={<Placement />} />
       <Route exact path="/atlanta-placement" element={<PlacementResult />} />
-      <Route exact path="/python-package" element={<PythonPackage />} />
 
+      <Route exact path="/python-package" element={<PythonPackage />} />
     </Routes>
   </Router>
 );

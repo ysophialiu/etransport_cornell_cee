@@ -695,12 +695,12 @@ const LiveLaunch = () => {
 
           <Form.Group as={Row} className="mb-3 justify-content-md-center">
             <Col sm={2}>
-              <Button className="pageBtn" type="button" onClick={() => navigate(-1)}>
+              <Button className="btn-primary" type="button" onClick={() => navigate(-1)}>
                 {'Back'}
               </Button>
             </Col>
             <Col md={3}>
-              <Button className="pageBtn" type="submit">
+              <Button className="btn-primary" type="submit">
                 {'Get Charging Demand'}
               </Button>
             </Col>
@@ -727,3 +727,4 @@ const LiveLaunch = () => {
 }
 
 export default LiveLaunch;
+

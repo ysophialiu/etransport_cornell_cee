@@ -99,22 +99,22 @@ export default class Result extends React.Component {
 
     return (
       <div>
-        <Header />
-        <div className="big_title">{metro_value} Metropolitan Area</div>
+        {/*<Header />
+        <div className="big_title">{metro_value} Metropolitan Area</div>*/}
 
-        <div className="content">
+        {/*<div className="content">*/}
           {/*TODO: All the text should be passed from back-end. 
             When user select different settings, the text should 
             be different. */}
-          <div>
+          {/*<div>
             Atlanta Metropolitan area, located in Georgia, U.S. is
             the third-largest metropolitan region in the southeastern
             U.S. and the fourth-fastest-growing metropolitan area in the
             U.S. The area contains 21 counties and 5922 Traffic analytic
             zones (TAZs). For more information about the region, please visit
             the <a href="https://atlantaregional.org">Atlanta Regional Commission (ARC)</a>.
-          </div>
-          <div className="section">
+          </div>*/}
+          {/*<div className="section">*/}
             <div className="subtitle">
               BEV travel demand
             </div>
@@ -170,7 +170,7 @@ export default class Result extends React.Component {
                 BEV travel demand
               </div>
             </div>
-          </div>
+          {/*</div>*/}
 
           <div className="section">
             <div className="subtitle">
@@ -324,11 +324,10 @@ export default class Result extends React.Component {
             </div>
           </div>
           <div className="btnContent">
-            <button className="pageBtn">Result from our research</button>
             <NavigateButton>
               {(navigate) => (
                 <button
-                  className="pageBtn"
+                  className="btn-primary"
                   onClick={() => navigate("/live-model")}
                 >
                   Live simulator - Atlanta Metropolitan Area
@@ -336,7 +335,7 @@ export default class Result extends React.Component {
               )}
             </NavigateButton>
           </div>
-        </div>
+        {/*</div>*/}
       </div>
     );
   }

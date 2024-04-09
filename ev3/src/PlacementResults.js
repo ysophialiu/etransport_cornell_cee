@@ -1,21 +1,21 @@
-import Header from "./Header";
 import React from "react";
 import "./general.css";
 import { useNavigate } from "react-router-dom";
 function NavButton() {
   const navigate = useNavigate();
-  return <button className="pageBtn" onClick={() => navigate("/python-package")}>Python Package</button>
-}
+
+  return (
+    <button className="btn-primary" onClick={() => navigate("/python-package")}>
+      Python Package
+    </button>);
+};
 export default class PlacementResult extends React.Component {
 
   render() {
     const base = 'http://etransport.cee.cornell.edu/api/charging_placement';
     return (
       <div>
-        <Header />
-        <div className="big_title">Atlanta Charging Placement Case Study</div>
         <div className="content">
-          <div className="section">
             <div className="subtitle">
               Optimal EV Charging Infrastructure Placement
             </div>
@@ -45,7 +45,7 @@ export default class PlacementResult extends React.Component {
               demands - the distribution is spread out somewhat evenly across most
               areas.
             </div>
-	    <div>
+            <div>
               Under the optimal configuration found in our research, the
               average charging time was around 6.9 hours, with much shorter
               average charging times at work and in public and much longer
@@ -55,10 +55,9 @@ export default class PlacementResult extends React.Component {
               <img src={base + "/charging_time_distribution"}
                 alt="Distribution of charging times found in the simulation based on location and charger type"
               />
-	      <div> Charging times distribution based on location. Left: Home Chargers. Center: Public Chargers. Right: Work Chargers. </div>
+              <div> Charging times distribution based on location. Left: Home Chargers. Center: Public Chargers. Right: Work Chargers. </div>
             </div>
-          </div>
-          <div className="section">
+
             <div className="subtitle">
               Effects of Parameters and Assumptions
             </div>
@@ -96,7 +95,6 @@ export default class PlacementResult extends React.Component {
                 alt="Graph showing the effect of charging price on the optimal configuration and NPV" />
               <div>The bar graphs show the optimal simulated configurations of chargers in each situation. The line graph shows how the NPV is estimated to change with respect to the market size. </div>
             </div>
-          </div>
           <div className="btnContent">
             <NavButton />
           </div>

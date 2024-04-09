@@ -1,17 +1,13 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./header.css";
 import "./general.css";
 
 const Header = () => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
-  function handleContactButton() {
-    navigate('/contact-us');
-  }
-    function handlemain() {
+  function handlemain() {
     navigate('/')
   };
 
@@ -27,10 +23,8 @@ const Header = () => {
         <Navbar variant="light" expand="lg">
           <Nav expand="lg" className="me-auto custom-navbar" >
             <Nav.Link href="/" className="custom-btn">Home</Nav.Link>
-			<NavDropdown title="Case Studies">
-              <NavDropdown.Item href="/atlanta-result">Atlanta Metropolitan Area</NavDropdown.Item>
-			</NavDropdown>
-            <Nav.Link href="/live-modelN" className="custom-btn">Live Simulation</Nav.Link>
+            <Nav.Link href="/demand" className="custom-btn"> Charging Demand </Nav.Link>
+            <Nav.Link href="/placement" className="custom-btn"> Charging Placement </Nav.Link>
             <Nav.Link href="/contact-us" className="custom-btn">Contact Us</Nav.Link>
           </Nav>
         </Navbar>

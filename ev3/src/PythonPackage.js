@@ -13,9 +13,13 @@ const PythonPackage = () => {
           Python programs based on our models. These tools have been compiled into a
           Python package, which is available to download here.
         </p>
-        <div className="btnContent">
-          <button className="btn-primary"> Download the Transport Electrification Python Package</button>
-        </div>
+        <a class="package-btn" href="https://github.com/ysophialiu/etransport_cornell_cee" rel="noreferrer noopener" target="_blank">
+          <div className="btnContent">
+            <button className="btn-primary">
+              Download the Transport Electrification Python Package
+            </button>
+          </div>
+        </a>
       </div>
     </div>
   );
