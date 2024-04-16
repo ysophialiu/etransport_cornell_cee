@@ -132,10 +132,31 @@ body {
 
 .table-of-contents {
   position: sticky;
-  position: -webkit-sticky; /* For Safari */
+  position: -webkit-sticky;
+  /* For Safari */
   max-height: calc(100vh - 70px);
-  overflow: auto;
+  /* overflow: auto; */
   padding-right: 20px;
+  margin-right: 20px;
+  top: 0px;
+  /* background: lightgray; */
+  /* margin-bottom: auto; */
+  padding-top: 10px;
+}
+
+.table-of-contents ul {
+  background: lightgray;
+  padding-right: 15px;
+}
+
+.table-of-contents li {
+  text-decoration-line: underline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table-of-contents li:nth-child(n+2) {
+  border-top: 1px solid;
 }
 
 .content {
