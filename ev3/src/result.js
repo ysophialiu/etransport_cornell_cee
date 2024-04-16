@@ -115,7 +115,7 @@ export default class Result extends React.Component {
             the <a href="https://atlantaregional.org">Atlanta Regional Commission (ARC)</a>.
           </div>*/}
           {/*<div className="section">*/}
-            <div className="subtitle">
+            <div className="subtitle" id="bev-travel-demand">
               BEV travel demand
             </div>
             <div>
@@ -173,7 +173,7 @@ export default class Result extends React.Component {
           {/*</div>*/}
 
           <div className="section">
-            <div className="subtitle">
+            <div className="subtitle" id="charging-demand">
               Charging demand by users' behaviour
             </div>
             <div>
@@ -274,7 +274,7 @@ export default class Result extends React.Component {
           </div>
 
           <div className="section">
-            <div className="subtitle">
+            <div className="subtitle" id="avg-daily">
               Average daily charging demand by charging mode
             </div>
 

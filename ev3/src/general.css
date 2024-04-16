@@ -60,6 +60,84 @@ body {
   text-align: center;
 }
 
+.study-content {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+@media (min-width: 580px) {
+  .study-content {
+    max-width: 522px;
+  }
+}
+
+@media (min-width: 768px) {
+  .study-content {
+    max-width: 691px;
+  }
+}
+
+@media (min-width: 900px) {
+  .study-content {
+    max-width: 810px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .study-content {
+    max-width: 1080px;
+  }
+}
+
+.study-content .subtitle {
+  color: #e53935;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.study-content .subtitle-small-two {
+  color: #e53935;
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.study-content .paragraph {
+  padding-bottom: 30px;
+}
+
+.study-content .item {
+  padding-bottom: 15px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.main-content {
+  padding-right: 20px;
+}
+
+.table-of-contents {
+  position: sticky;
+  position: -webkit-sticky; /* For Safari */
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+  padding-right: 20px;
+}
+
 .content {
   width: 100%;
   font-size: 18px;
