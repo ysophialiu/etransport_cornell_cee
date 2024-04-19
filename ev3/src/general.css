@@ -18,7 +18,7 @@ body {
   width: 100%;
   margin-bottom: 1em;
   /*background-color: #f5f5f5;*/
-  background-color: #e53935;
+  background-color: #b31b1b;
   color: white;
 }
 
@@ -145,7 +145,7 @@ body {
 }
 
 .table-of-contents ul {
-  background: lightgray;
+  background: #b31b1b;
   padding-right: 15px;
 }
 
@@ -153,6 +153,8 @@ body {
   text-decoration-line: underline;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .table-of-contents li:nth-child(n+2) {
